@@ -30,7 +30,7 @@ For this demo, we set up the servers to run as depicted in the following
 diagram:
 
 ```
-        Running in PM          :   Not Running in PM
+         Running in PM         :         Not Running in PM
                                :
 +--------+       +---------+   :   +--------+
 | API    |------>| Gateway |---:-->| Web    |
