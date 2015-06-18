@@ -37,8 +37,8 @@ diagram:
 | Server |<------| Server  |<--:---| Server |
 +--------+       +---------+   :   +--------+
  |               |     |       :   |    |
- HTTP            HTTP  HTTPS   :   HTTP HTTPS  <--- Service Type
- 3002            3001  3101    :   2001 2101   <--- Port Number
+ HTTP            HTTP  HTTPS   :   HTTP HTTPS  <-- Service Type
+ 3002            3001  3101    :   2001 2101   <-- Port Number
 ```
 
 The project consists of the three usual components, but serving on different
