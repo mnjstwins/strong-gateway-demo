@@ -2,7 +2,7 @@
 
 This is a special phase that sets up the application up to `phase-4` using the
 [StrongLoop Process Manager](http://docs.strongloop.com/display/SLC/Using+Process+Manager),
-which we'll refer to as PM from here on.
+which we'll refer to as *PM* from here on.
 
 ## Prerequisites
 
