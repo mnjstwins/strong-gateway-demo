@@ -17,7 +17,7 @@ which we'll refer to as *PM* from here on.
 OSX/Linux:
 
 ```
-$ pm-demo
+$ ./pm-demo
 ```
 
 Windows:
