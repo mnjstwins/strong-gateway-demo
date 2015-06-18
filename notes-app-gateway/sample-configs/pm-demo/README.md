@@ -22,7 +22,7 @@ $ pm-demo
 
 Windows:
 
-- Not supported yet
+- Not supported
 
 ### Getting started
 
