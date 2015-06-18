@@ -87,9 +87,9 @@ port is on 3101). We also need to [reconfigure the HTTPS redirection port in
 
 #### Try it out
 
-Once you have all the servers configured, browse to `localhost:2001` to start
-the authentication flow. Click the link on the home page and continue following
-the instructions to see the entire procedure. Notice the URL changes as you
+Once you have all the servers configured, browse to [`localhost:2001`](http://localhost:2001)
+to start the authentication flow. Click the link on the home page and follow the
+instructions to go through the entire process. Notice the URL changes as you
 proceed through the questions.
 
 > You can start all the servers automatically by running the included [`pm-demo`](../../pm-demo)
