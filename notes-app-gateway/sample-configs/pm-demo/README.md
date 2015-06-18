@@ -1,7 +1,8 @@
 # pm-demo
 
-This is a special phase that sets up the application phase-4, but uses
-[StrongLoop Process Manager](http://docs.strongloop.com/display/SLC/Using+Process+Manager), which we'll refer to as PM from here on.
+This is a special phase that sets up the application up to `phase-4` using the
+[StrongLoop Process Manager](http://docs.strongloop.com/display/SLC/Using+Process+Manager),
+which we'll refer to as PM from here on.
 
 ## Prerequisites
 
@@ -21,7 +22,7 @@ $ pm-demo
 
 Windows:
 
-Not supported yet
+- Not supported yet
 
 ### Getting started
 
@@ -40,23 +41,24 @@ diagram:
  3002            3001  3101    :   2001 2101   <---- Port Number
 ```
 
-As you can see, the project consists of the three usual components, but serving
-on different ports. When you start a process using PM, a service ID is assigned
-to the process starting at 1. PM then starts the process on port 3000 + the
-service ID number.
+The project consists of the three usual components, but serving on different
+ports. When you start a process (in our case, a server) using PM, a service ID
+is assigned to the process starting at 1. PM then starts the process on port
+3000 + the service ID number.
 
 #### Set up the gateway server
 
-In our case, we want to start the gateway as the first service under PM. This
-means the gateway will have service id number 1 and be hosted on port 3001.
-However, PM does not reconfigure any HTTPS ports, so we will need to change the
-gateway's default HTTPS port from 3005 to 3101 (for consistency purposes). Once
-the ports are configured, start the service:
+We want to start the gateway as the first service under PM. This means the
+gateway will have service id number 1 and be hosted on port 3001.  However, PM
+does not reconfigure any HTTPS ports out-of-box, so we will need to manually
+change the gateway's default HTTPS port from 3005 to 3101 and reconfigure the
+HTTPS redirection in `middleware.json` to port 3101. Once the ports are
+configured, start the service:
 
 ```
 cd gateway-server
 slc start
-slc ctl status # confirme service id 1
+slc ctl status # confirm service id 1
 ```
 
 #### Set up the API server
@@ -76,8 +78,19 @@ slc ctl status # confirme service id 2
 
 The web server is not managed by PM, so we can set ports as we would normally do
 in any LoopBack application. In this case, we set the HTTP port to 2001 and
-HTTPS port to 2101 to match the gateway server's ports for consistency (ie.
-gateway's HTTP port is on 3001 and HTTPS port is on 3101).
+HTTPS port to 2101 to match the gateway server's ports for consistency (ie. 
+gateway's HTTP port is on 3001 and HTTPS port is on 3101). We also need to
+reconfigure the HTTPS redirection port in `middleware.json` to 3101.
+
+### Trying out the demo
+
+Once you have all the servers configured, browse to `localhost:2001` to start
+the authentication flow. Click the link on the home page and continue following
+the instructions to see the entire procedure. Notice the URL changes as you
+proceed through the questions.
+
+> You can start all the servers automatically by running the included [`pm-demo`](../../pm-demo)
+helper script.
 
 ## Troubleshooting
 
