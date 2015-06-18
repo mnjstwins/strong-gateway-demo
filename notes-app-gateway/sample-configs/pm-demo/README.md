@@ -96,7 +96,8 @@ helper script.
 
 ### Reset PM
 
-If you are having trouble running PM, you can reset it by `notes-app-gateway` project root, run:
+If you are having trouble running PM, you can reset it by changing to
+`notes-app-gateway` project root and running:
 
 ```
 $ pm-cleanup
