@@ -30,15 +30,15 @@ For this demo, we set up the servers to run as depicted in the following
 diagram:
 
 ```
-         Running in PM         :         Not Running in PM
-                               :
-+--------+       +---------+   :   +--------+
-| API    |------>| Gateway |---:-->| Web    |
-| Server |<------| Server  |<--:---| Server |
-+--------+       +---------+   :   +--------+
- |               |     |       :   |    |
- HTTP            HTTP  HTTPS   :   HTTP HTTPS  <-- Service Type
- 3002            3001  3101    :   2001 2101   <-- Port Number
+      Not Running in PM       :       Running in PM
+                              :
+                 +--------+   :   +---------+       +--------+
+                 | Web    |---:-->| Gateway |------>| API    |
+                 | Server |<--:---| Server  |<------| Server |
+                 +--------+   :   +---------+       +--------+
+                 |    |       :   |    |            |
+Service Type --> HTTP HTTPS   :   HTTP HTTPS        HTTP
+ Port Number --> 2001 2101    :   3001 3101         3002
 ```
 
 The project consists of the three usual components, but serving on different
