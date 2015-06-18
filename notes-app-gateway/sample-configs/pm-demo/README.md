@@ -50,10 +50,10 @@ is assigned to the process starting at 1. PM then starts the process on port
 
 We want to start the gateway as the first service under PM. This means the
 gateway will have service id number 1 and be hosted on port 3001.  However, PM
-does not reconfigure any HTTPS ports out-of-box, so we will need to manually
-change the gateway's default HTTPS port from 3005 to 3101 and reconfigure the
-HTTPS redirection in `middleware.json` to port 3101. Once the ports are
-configured, start the service:
+does not reconfigure any HTTPS ports out-of-box, so we will need to [manually
+change the gateway's default HTTPS port from 3005 to 3101](gateway-server/server/config.json#L6)
+and [reconfigure the HTTPS redirection in `middleware.json` to port 3101](gateway-server/server/middleware.json#L43).
+Once the ports are configured, start the service:
 
 ```
 cd gateway-server
