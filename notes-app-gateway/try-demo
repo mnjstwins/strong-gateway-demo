@@ -1,6 +1,12 @@
 cd api-server && npm i
 cd ../web-server && npm i
 cd ../gateway-server && git submodule init && git submodule update
-cd ../sample-configs/phase-4 && copy-files
+cd ../sample-configs/pm-demo && copy-files
 cd ../../gateway-server && npm i
-cd .. && node .
+slc start
+slc ctl set-size 1 1
+cd ../api-server
+slc start
+slc ctl set-size 2 1
+cd ../web-server
+node .
