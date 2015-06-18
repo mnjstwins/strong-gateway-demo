@@ -82,7 +82,7 @@ HTTPS port to 2101 to match the gateway server's ports for consistency (ie.
 gateway's HTTP port is on 3001 and HTTPS port is on 3101). We also need to
 reconfigure the HTTPS redirection port in `middleware.json` to 3101.
 
-### Trying out the demo
+#### Try it out
 
 Once you have all the servers configured, browse to `localhost:2001` to start
 the authentication flow. Click the link on the home page and continue following
