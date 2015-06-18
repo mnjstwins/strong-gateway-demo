@@ -63,11 +63,11 @@ slc ctl status # confirm service id 1
 
 #### Set up the API server
 
-The API server in this demo is [already configured to run on port
-3002](api-server/server/config.jsonL#4). However, in our case this doesn't
-matter because PM will assign its own port based on the service id. Since this
-app will the be second process we start, it will be assigned a service id of
-3002 anyways:
+The API server in this demo is [already configured to run on port 3002](api-server/server/config.json#L4).
+However, in our case this doesn't matter because PM will assign its own port
+based on the service id. Since this application will the be second process we
+start, it will be assigned a service id of 3002 by default. Once the ports are
+configured, start the service:
 
 ```
 cd ../api-server
