@@ -100,7 +100,7 @@ helper script.
 ### Reset PM
 
 If you are having trouble running PM, you can reset it by changing to
-`notes-app-gateway` project root and running:
+`notes-app-gateway` project root and running the [`pm-cleanup` helper script](../../pm-cleanup):
 
 ```
 $ pm-cleanup
@@ -110,9 +110,6 @@ This command:
 
 - Stops all PM instances that may have been previously running
 - Removes the current Strong PM metadata in `~/.strong-pm`
-
-> We include the [`pm-cleanup` helper script](../../pm-cleanup) to make it
-easier to start PM from a clean state.
 
 ---
 
