@@ -42,7 +42,7 @@ Then login to Arc (if you have not already done so) and you'll see the
 ### Add the current directory to the PATH environment variable
 
 You will need to add the current directory to the [PATH environment variable](http://en.wikipedia.org/wiki/PATH_(variable))
-to run the included scripts. Do this by adding the following to your startup
+to run the scripts provided with the tutorials. Do this by adding the following to your startup
 script:
 
 ```
