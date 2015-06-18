@@ -87,7 +87,7 @@ port is on 3101). We also need to [reconfigure the HTTPS redirection port in
 
 #### Try it out
 
-Once you have all the servers configured, browse to [`localhost:2001`](http://localhost:2001)
+Once you have all the servers configured and started, browse to [`localhost:2001`](http://localhost:2001)
 to start the authentication flow. Click the link on the home page and follow the
 instructions to go through the entire process. Notice the URL changes as you
 proceed through the questions.
