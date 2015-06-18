@@ -111,6 +111,9 @@ This command:
 - Stops all PM instances that may have been previously running
 - Removes the current Strong PM metadata in `~/.strong-pm`
 
+> We include the [`pm-cleanup` helper script](../../pm-cleanup) to make it
+easier to start PM from a clean state.
+
 ---
 
 [Other LoopBack Examples](https://github.com/strongloop/loopback-example)
