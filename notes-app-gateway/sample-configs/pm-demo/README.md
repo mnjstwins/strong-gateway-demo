@@ -52,7 +52,7 @@ We want to start the gateway as the first service under PM. This means the
 gateway will have service id number 1 and be hosted on port 3001.  However, PM
 does not reconfigure any HTTPS ports out-of-box, so we will need to [manually
 change the gateway's default HTTPS port from 3005 to 3101](gateway-server/server/config.json#L6)
-and [reconfigure the HTTPS redirection in `middleware.json` to port 3101](gateway-server/server/middleware.json#L43).
+and [reconfigure the HTTPS redirection in `middleware.json` to port 3101](gateway-server/server/middleware.json#L53).
 Once the ports are configured, start the service:
 
 ```
@@ -63,10 +63,11 @@ slc ctl status # confirm service id 1
 
 #### Set up the API server
 
-The API server in this demo is already configured to run on port 3002. However,
-in our case this doesn't matter because PM will assign its own port based on the
-service id. Since this app will the be second process we start, it will be
-assigned a service id of 3002 anyways:
+The API server in this demo is [already configured to run on port
+3002](api-server/server/config.jsonL#4). However, in our case this doesn't
+matter because PM will assign its own port based on the service id. Since this
+app will the be second process we start, it will be assigned a service id of
+3002 anyways:
 
 ```
 cd ../api-server
@@ -77,10 +78,12 @@ slc ctl status # confirme service id 2
 #### Set up the web server
 
 The web server is not managed by PM, so we can set ports as we would normally do
-in any LoopBack application. In this case, we set the HTTP port to 2001 and
-HTTPS port to 2101 to match the gateway server's ports for consistency (ie. 
-gateway's HTTP port is on 3001 and HTTPS port is on 3101). We also need to
-reconfigure the HTTPS redirection port in `middleware.json` to 3101.
+in any LoopBack application. In this case, we [set the HTTP port to
+2001](web-server/server/config.json#L4)
+and [HTTPS port to 2101](web-server/server/server.js#L25) to match the gateway
+server's ports for consistency (ie. gateway's HTTP port is on 3001 and HTTPS
+port is on 3101). We also need to [reconfigure the HTTPS redirection port in
+`middleware.json` to 2101](web-server/server/middleware.json#L25).
 
 #### Try it out
 
