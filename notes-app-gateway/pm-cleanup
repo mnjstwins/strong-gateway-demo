@@ -1,0 +1,2 @@
+slc ctl shutdown
+rm -rf ~/.strong-pm
