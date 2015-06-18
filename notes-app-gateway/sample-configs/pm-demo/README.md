@@ -6,9 +6,9 @@ which we'll refer to as PM from here on.
 
 ## Prerequisites
 
-- Everything in [`prerequisites.md`](../../doc/prerequisites.md)
+- Everything in [`prerequisites.md`](../../../doc/prerequisites.md)
 - [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
-- [`strong-gateway-demo/notes-app-plain`](../../notes-app-plain)
+- [`strong-gateway-demo/notes-app-plain`](../../../notes-app-plain)
 
 ## Run the demo
 
