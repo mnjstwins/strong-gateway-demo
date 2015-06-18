@@ -103,7 +103,8 @@ If you are having trouble running PM, you can reset it by changing to
 `notes-app-gateway` project root and running the included [`pm-cleanup` helper script](../../pm-cleanup):
 
 ```
-$ pm-cleanup
+$ cd notes-app-gateway
+$ ./pm-cleanup
 ```
 
 This command:
